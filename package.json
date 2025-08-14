@@ -2,15 +2,18 @@
   "name": "api-rest-nodejs-02",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "lint": "eslint src --ext .ts --fix",
     "knex": "node --import tsx ./node_modules/knex/bin/cli.js",
     "test": "vitest",
-    "build":"tsup src"
+    "build": "tsup src"
   },
   "keywords": [],
-  "author": "", 
+  "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
@@ -29,6 +32,7 @@
     "dotenv": "^17.2.1",
     "fastify": "^5.4.0",
     "knex": "^3.1.0",
+    "pg": "^8.16.3",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7",
     "zod": "^4.0.15"
