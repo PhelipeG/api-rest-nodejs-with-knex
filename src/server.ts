@@ -1,9 +1,10 @@
 import { env } from "./env";
 import { app } from "./app";
 
-const port = process.env.PORT || 3333;
-
-app.listen({ port: env.PORT }, (err) => {
+app.listen({ 
+  port: env.PORT, 
+  host: env.HOST 
+}, (err) => {
   if (err) {
     app.log.error(err);
     process.exit(1);

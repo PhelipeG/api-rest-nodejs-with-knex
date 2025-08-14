@@ -8,6 +8,11 @@ export const app = fastify({
 
 app.register(cookie)
 
+// Health check route
+app.get('/', async (request, reply) => {
+  return { message: 'API is running!' }
+})
+
 app.register(transactionsRoute, {
   prefix: 'transactions',
 })
